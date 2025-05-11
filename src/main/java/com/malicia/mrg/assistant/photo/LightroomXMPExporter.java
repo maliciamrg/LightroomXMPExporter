@@ -55,7 +55,7 @@ public class LightroomXMPExporter {
                 String keywords = rs.getString("keywords");
 
                 File photoFile = new File(absolutePath + folderPath, baseName);
-                if (!photoFile.exists() || keywords==null || keywords.equals("") || rating + flag == 0)) {
+                if (!photoFile.exists() || keywords==null || keywords.isEmpty() || rating + flag == 0) {
                     System.err.println("Skipping file: " + photoFile);
                     continue;
                 }
